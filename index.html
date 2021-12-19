@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>令和３年度白華祭</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+      h1 {
+  font-size: 100px;
+  text-align: center;
+}
+h1{
+
+    display: inline;
+}
+h2{
+  font-size: 50px;
+}
+h3{
+  font-size:30px
+}
+    </style>
+<script>
+    // カウントダウンする秒数
+  var sec = 26;
+ 
+  // 開始日時を設定
+  var dt = new Date();
+  console.log("Start: ", dt);
+  // 終了時刻を開始日時+カウントダウンする秒数に設定
+  var endDt = new Date(dt.getTime() + sec * 1000);
+  console.log("End : ", dt);
+
+  // 1秒おきにカウントダウン
+  var cnt = sec;
+  var id = setInterval(function(){
+    cnt--;
+    document.getElementById('edit_area').innerHTML =  Math.floor(  cnt/60  );
+    document.getElementById('sec_area').innerHTML =  cnt-Math.floor(  cnt/60  )* 60
+    var time ="："
+    document.getElementById('time').innerHTML = time;
+    var ato ="残り"
+    document.getElementById("ato").innerHTML= ato;
+      var edit ="ロフト付きの家です。この家には木製の家具が見られます"
+          document.getElementById('edit').innerHTML= edit;
+    // 現在日時と終了日時を比較
+    dt = new Date();
+    if(dt.getTime() >= endDt.getTime()){
+      clearInterval(id);
+      var str = "次の場所へ移動してください";
+      document.getElementById('edit_area').innerHTML = str ;
+      var not ="　"
+      document.getElementById('sec_area').innerHTML = not;
+      var time ="　"
+     document.getElementById('time').innerHTML= time;
+      var ato ="　"
+    document.getElementById("ato").innerHTML= ato;
+      var edit =" "
+          document.getElementById('edit').innerHTML= edit;
+    }
+  }, 1000);
+  const kaunt = () => {
+
+
+  // カウントダウンする秒数
+  var sec = 26;
+ 
+  // 開始日時を設定
+  var dt = new Date();
+  console.log("Start: ", dt);
+  // 終了時刻を開始日時+カウントダウンする秒数に設定
+  var endDt = new Date(dt.getTime() + sec * 1000);
+  console.log("End : ", dt);
+
+  // 1秒おきにカウントダウン
+  var cnt = sec;
+  var id = setInterval(function(){
+    cnt--;
+    document.getElementById('edit_area').innerHTML =  Math.floor(  cnt/60  );
+    document.getElementById('sec_area').innerHTML =  cnt-Math.floor(  cnt/60  )* 60
+     var time ="："
+    document.getElementById('time').innerHTML = time;
+    var ato ="残り"
+    document.getElementById("ato").innerHTML= ato;
+      var edit ="ロフト付きの家です。この家には木製の家具が見られます"
+          document.getElementById('edit').innerHTML= edit;
+    // 現在日時と終了日時を比較
+    dt = new Date();
+    if(dt.getTime() >= endDt.getTime()){
+      clearInterval(id);
+      var str = "次の場所へ移動してください";
+      document.getElementById('edit_area').innerHTML = str ;
+      var not ="　"
+      document.getElementById('sec_area').innerHTML = not;
+      var time ="　"
+     document.getElementById('time').innerHTML= time;
+      var ato =" "
+          document.getElementById('ato').innerHTML= ato;
+      var edit =" "
+          document.getElementById('edit').innerHTML= edit;
+    }
+  }, 1000);
+  }
+  setInterval(kaunt,27000);
+    
+</script>
+  </head>
+      <body  bgcolor="#64F9C1">
+    <section class="hero" style="background: #005FFF">
+  <div class="hero-body">
+    <p class="title" >
+      <font color="white">
+      １年理数科　白華祭　B班
+      </font>
+    </p>
+  </div>
+</section>
+    <br></br>
+<br><br>
+<h3 id = "ato"> </h3>
+    <h1 id="edit_area">準</h1><h1 id = "time">備</h1><h1 id="sec_area">中</h1>
+    <br></br>
+<br></br>
+<h2 id = "edit">ロフト付きの家です。この家には木製の家具が見られます</h2>
+</div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+  <script type="text/javascript"><!--
+function myEnter(){
+     myPassWord=prompt("パスワードを入力してください","");
+     if ( myPassWord == "hakkasai" ){
+         const url = 'https://script.google.com/d/1hvKlUK3hlLiGRef74m6xySS8jxWtE-AK5tGowRBdtmgHW5peqjnB-842/edit?usp=sharing'
+window.open(url, '_blank')
+     }else{
+         alert( "パスワードが違います" );
+     }
+}
+// --></script>
+
+<form>
+<input type="button" value="編集用" onclick="myEnter()"><br></br>
+</form>
+ <br></br>
+<br></br>
+  </body>
+</html>
